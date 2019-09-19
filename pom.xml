@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.navcoin</groupId>
     <artifactId>navcoind-rpc-sdk</artifactId>
-    <version>0.4.1</version>
+    <version>0.5</version>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -36,7 +36,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
+            <version>1.18.10</version>
             <scope>provided</scope>
         </dependency>
 
@@ -76,6 +76,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <build>
