@@ -9,6 +9,7 @@ public class PaymentRequest {
     private Integer version;
     private String hash;
     private String blockHash;
+    private String proposalHash;
     private String description;
     private Double requestedAmount;
     private Integer votesYes;

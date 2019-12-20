@@ -15,6 +15,7 @@ public class Proposal {
     private String description;
     private Double requestedAmount;
     private Double notPaidYet;
+    private Double notRequestedYet;
     private Double userPaidFee;
     private String paymentAddress;
     private Long proposalDuration;
