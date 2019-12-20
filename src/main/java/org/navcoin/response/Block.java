@@ -18,6 +18,12 @@ public class Block {
     private String versionHex;
     private String merkleroot;
     private List<String> tx;
+    private int tx_count;
+    private int proposal_count;
+    private int payment_request_count;
+    private int proposal_votes_count;
+    private int payment_request_votes_count;
+    private int payment_request_payouts_count;
     private long time;
     private int mediantime;
     private long nonce;
