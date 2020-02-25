@@ -26,4 +26,5 @@ public class Transaction {
     private Integer confirmations;
     private long time;
     private long blocktime;
+    private String strdzeel;
 }
