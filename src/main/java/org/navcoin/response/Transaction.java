@@ -1,5 +1,6 @@
 package org.navcoin.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
@@ -9,6 +10,7 @@ import org.navcoin.response.transaction.Vout;
 
 @Data
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Transaction {
     private String hex;
     private String txid;

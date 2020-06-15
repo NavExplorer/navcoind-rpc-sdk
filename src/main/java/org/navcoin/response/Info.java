@@ -5,6 +5,7 @@
 
 package org.navcoin.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.navcoin.response.info.CommunityFund;
@@ -12,6 +13,7 @@ import org.navcoin.response.info.PrivateMoneySupply;
 
 @Data
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Info {
     private long version;
     private long protocolversion;
