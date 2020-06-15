@@ -1,5 +1,6 @@
 package org.navcoin;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import net.sf.ezmorph.bean.MorphDynaBean;
@@ -61,7 +62,9 @@ public class Client {
             checkNavcoinErrors((MorphDynaBean)baseResponse.get("error"));
 
             if (requiresHydration(object)) {
-                response = new ObjectMapper().readValue(JSONSerializer.toJSON(baseResponse.get("result")).toString(), object);
+                response = new ObjectMapper()
+                    .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+                    .readValue(JSONSerializer.toJSON(baseResponse.get("result")).toString(), object);
             } else {
                 response = baseResponse.get("result");
             }
